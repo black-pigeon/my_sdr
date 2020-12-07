@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>ad9363_cmos_if</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>rst</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>rst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.POLARITY">ACTIVE_HIGH</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>ref_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ref_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>user_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>user_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>ad9363_cmos_if</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>270e1b1f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>ad9363_cmos_if</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>270e1b1f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>tb_ad9363_cmos_if</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>6c6c12f6</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>ref_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rx_clk_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rx_frame_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rx_data_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tx_clk_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tx_frame_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tx_data_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_data_i1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_data_q1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rx_status</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dac_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dac_data_i1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dac_data_q1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>user_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rx_delay_value</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rx_delay_load_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_clk_ce</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/ad9363_cmos_if_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/ad9363_cmos_if_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/ad9363_cmos_if.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_7549b902</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="ila" xilinx:version="6.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/ad9363_cmos_if_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/ad9363_cmos_if_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/ad9363_cmos_if.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="ila" xilinx:version="6.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>tb/tb_ad9363_cmos_if.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/ad9363_cmos_if_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>ad9363_cmos_if_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">ad9363_cmos_if_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>ad9363_cmos_if_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>19</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-12-07T11:04:16Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="nopcore"/>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48600fb2_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6874bf26_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@292e79de_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65675e18_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65401035_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b2a66_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@333280a0_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f629241_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e6260a0_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4691fd2_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ec0cac_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8167aa_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60022d3e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c6b9e03_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@451462e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cd9a4ae_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c43ad7e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3527d759_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62ff9853_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d22302_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67efae0e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f912def_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32371401_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f9c50cb_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f7b96bd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@796c30d2_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61266c3f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2673492f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3545bea6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b475361_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bf10e39_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@245d49cd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da76169_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ccec558_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4cb31d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33a2a6a8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c9c564a_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7452317a_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5c7708_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fd32281_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b5395f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db5fbf7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e763ce8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bb3d484_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@767eb8d1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72e9e3d7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37df3e84_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a1a34f1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@777f5f1c_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15a0da20_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46d9f9fa_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61422438_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f4a619b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1090e269_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b17f31_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@568467db_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a81979f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad0b3bf_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@89a113b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e4bf9d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21b8ce74_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d3f7b9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e68176_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5afdb5f9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bd3af9f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f77993_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4824cc18_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21c571b9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9926f8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@85e4c30_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34a77df9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da011d5_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76d78235_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14c1f2a6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79d42a22_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a8554d7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1edcee_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ab671a_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ec08c15_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397f0051_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79ab53ec_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9044461_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@704038b7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b6b561_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d978b05_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52400c81_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541b0a5_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@670aa576_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@797e01a0_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cbbcea7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49e2960_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26f9117d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3717fd9c_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122ee0bc_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24ef2752_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ed8d393_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b6e1420_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e1c411_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc443aa_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f1f7e6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b33f7a1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3130a808_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11511d4_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c0d650_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@195da8fd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b1235a4_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c2bfa67_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62ea5592_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3efdf203_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b488151_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b9c3dea_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3943042e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40dc198b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6805c6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3324a4b9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@693ad442_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db8e732_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28099cb3_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@269e6b22_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19d25bf1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@315ca560_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229f4a85_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e397d6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43d95ff2_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fd8f5c8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55f891bf_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9381572_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e3e8dd8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49c0816b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6130be97_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40961773_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b4d14a5_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c3ef963_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c911574_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cce70f5_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49f9b5ba_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fdefb3c_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c2ecc7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff1887_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28959ccd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@537c4933_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e1bb597_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6486dc3c_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1444258f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@436adb06_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4167d42f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@606ff467_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@588f39d1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fcda634_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7516cf33_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e066b3e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b313e8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a5b4d16_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@580f2e91_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30eaefcc_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c149885_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c761b3d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ecc24d6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5306978b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f2a9fba_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34eb519b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9cb89f9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d25e5d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@426287bc_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a78081_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f883886_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6689166e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41e3d249_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33ddc260_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a1af93_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34adab37_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f25363a_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c7582bd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@131f4f5b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@98d82b3_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7667328a_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e16be_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19a0c707_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c4da857_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0f2509_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f015e3f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c1fda3_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e2bc313_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dfab63b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb14f76_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d967e8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c45652_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@163c514e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@141107a0_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4842cc5b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42ad4040_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15208eb0_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10ad76b7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f1ec4a3_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c0e8bf1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@187fbedc_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dd76a09_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1069314a_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10cfe8da_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e7a4e_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@426b5126_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65423ff1_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33850ec4_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50cc46d8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20616cd9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@145e5b23_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3832915_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d5f4c9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a7977c7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d47aadc_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a0afecd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24f60274_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10f9a648_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7587f22f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5227c351_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e9705f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47bda0d0_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f815424_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a5aaa81_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bbe29a9_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef79a36_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e1feecd_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@576c7f3f_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8d83e57_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71414400_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1937690b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@398d1b58_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14ea607d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54517ba2_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@452858d7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@637fed64_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d8c7be6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/ANT_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b416cc3_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e52ec43_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ca01e61_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aaed3f6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23bee14b_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c816630_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f46ed6_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78a3ce61_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fac3d1d_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@89506a7_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40851ba8_ARCHIVE_LOCATION">e:/Wcc/DSP/FPGA_SDR/Firmware/ad9363/ip_repo/ad9363_cmos_if</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="40339541"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="45fba3d5"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="43741eec"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="9e6c31d0"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
